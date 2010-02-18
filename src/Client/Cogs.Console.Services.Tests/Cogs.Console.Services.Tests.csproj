@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4594E3CA-8B90-4B8E-AA8D-7B513EE243E8}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Cogs.Console.Services.Tests</RootNamespace>
+    <AssemblyName>Cogs.Console.Services.Tests</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC Beta\Assemblies\System.Web.Abstractions.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC Beta\Assemblies\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Routing, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Microsoft ASP.NET\ASP.NET MVC Beta\Assemblies\System.Web.Routing.dll</HintPath>
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="xunit, Version=0.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\xunit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CogInstallationServiceFacts.cs" />
+    <Compile Include="LocalCogRepositoryFacts.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cogs.Console.Services\Cogs.Console.Services.csproj">
+      <Project>{B34B0F7B-8EAF-46E6-A904-4202AB176749}</Project>
+      <Name>Cogs.Console.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SampleCogs\ninject-1.0.cog" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SampleCogs\ninject-1.0\cog.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Conditions.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Conditions.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Core.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Core.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Extensions.AutoWiring.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Extensions.AutoWiring.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Extensions.Cache.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Extensions.Cache.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Extensions.MessageBroker.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Extensions.MessageBroker.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Framework.Web.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Framework.Web.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Framework.WinForms.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Framework.WinForms.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Integration.AjaxPro.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Integration.AjaxPro.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Integration.DynamicProxy2.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Integration.DynamicProxy2.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Integration.LinFu.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Integration.LinFu.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Integration.Log4net.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Integration.Log4net.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Integration.MonoRail.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Integration.MonoRail.xml" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Integration.NLog.dll" />
+    <Content Include="SampleCogs\ninject-1.0\cog\Ninject.Integration.NLog.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,6 @@
+-Setup DBMigrations and database schema
+-setup nhibernate
+-setup rhino.mocks
+-setup sqlite (for local datastore)
+-create XML config file format (james)
+-
